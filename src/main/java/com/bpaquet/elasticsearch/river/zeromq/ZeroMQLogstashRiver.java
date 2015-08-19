@@ -151,7 +151,7 @@ public class ZeroMQLogstashRiver extends AbstractRiverComponent implements River
                 prepareIndex().
                 setSource(zmq.receiveMessage()).
                 setIndex(computeIndex(prefix)).
-                setType(dataType);
+                setType("dataType");
 
             bulkProcessor.add(req.request());
           }
